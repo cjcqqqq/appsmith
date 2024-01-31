@@ -1,0 +1,12 @@
+SELECT
+	tp.id id,
+	tp.NAME NAME,
+	tp.STATUS STATUS,
+	tp.creator creator,
+	bl.`name` bl_name,
+	DATE_FORMAT( tp.created, '%Y-%m-%d' ) created,
+	DATE_FORMAT( tp.collect_date, '%Y-%m-%d' ) collect_date 
+FROM
+	tapd_project tp
+	LEFT JOIN yk_project_mapping_business pmb ON tp.id = pmb.project_id
+	LEFT JOIN yk_business_line bl ON pmb.business_id = bl.id;

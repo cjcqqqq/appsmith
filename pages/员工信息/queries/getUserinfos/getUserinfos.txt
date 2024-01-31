@@ -1,0 +1,16 @@
+SELECT
+	id,
+	wechat_name,
+	level_one,
+	level_two,
+	level_three,
+	duty,
+	area,
+	DATE_FORMAT( entry_time, '%Y-%m-%d' ) entry_time,
+	DATE_FORMAT( update_time, '%Y-%m-%d' ) update_time 
+FROM
+	`USER` 
+WHERE
+	isLeave = 0 
+ORDER BY
+	id;

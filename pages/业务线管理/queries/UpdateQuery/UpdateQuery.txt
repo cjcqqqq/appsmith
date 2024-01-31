@@ -1,0 +1,4 @@
+UPDATE yk_business_line SET
+		name = '{{update_form.fieldState.name.isVisible ? update_form.formData.name : update_form.sourceData.name}}',
+		remark = '{{update_form.fieldState.remark.isVisible ? update_form.formData.remark : update_form.sourceData.remark}}'
+WHERE id = {{data_table.selectedRow.id}};

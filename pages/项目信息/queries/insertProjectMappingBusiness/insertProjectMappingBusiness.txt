@@ -1,0 +1,6 @@
+INSERT INTO yk_project_mapping_business (
+	project_id,
+	business_id)
+VALUES (
+	'{{tbl_projectInfo.triggeredRow.id}}',
+	'{{selectBusinessline.selectedOptionValue}}');

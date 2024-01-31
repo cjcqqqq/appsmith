@@ -1,0 +1,1 @@
+select bl.id value,bl.name label from yk_business_line bl;

@@ -1,0 +1,2 @@
+DELETE FROM yk_project_mapping_business
+  WHERE project_id = {{tbl_projectInfo.triggeredRow.id}};
